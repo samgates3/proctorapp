@@ -1,0 +1,10 @@
+{
+  "auth": {
+    "proctorapp5e64d6a1": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false
+    }
+  }
+}
