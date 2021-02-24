@@ -1,22 +1,20 @@
 import React from 'react';
-import './App.css';
-import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react';
 
-
-
+import Home from './Components/Home';
+import Proctor from './Components/Proctor';
+import Webcams from './Components/Webcams';
+import { Route, Switch } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        Content
-        <AmplifySignOut />
-      </header>
-      <div id="otEmbedContainer">
-        <script src="https://tokbox.com/embed/embed/ot-embed.js?embedId=1f1059f3-ed6d-4a1b-9fd0-01f988a0bdea&room=DEFAULT_ROOM"></script>
-      </div>
-    </div>
-  );
+    <main>
+      <Switch>
+        <Route path='/' component={Home} exact />
+        <Route path='/Proctor' component={Proctor} />
+        <Route path='/Webcams' component={Webcams} />
+      </Switch>
+    </main>
+  )
 }
 
-export default withAuthenticator(App, true);
+export default App;
